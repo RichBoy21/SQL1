@@ -1,0 +1,59 @@
+Наружная реклама
+
+1.
+
+1.Подбор персонала(Create)
+2.Обучение пперсонала(Update)
+3.Поиск потенциальных клиентов(Read)
+4.Промоутер(Create)
+5.Разработка дизайна(Create)
+6.Изготовление рекламной конструкции(Create).
+7.Монтаж рекламных конструкций(Create)
+8.Обслуживание и ремонт рекламных конструкций(Update)
+9.Ценообразание(Update)
+10.Завершение сделки(Update)
+
+2.
+Вывести название и стоимость товаров от 20 до 200 EUR.
+
+SELECT ProductName,
+       Price
+FROM Products
+WHERE
+       Price BETWEEN 20 AND 200
+
+3.
+Вывести товары от поставщиков 2 и 4 в порядке убывания цены.
+
+SELECT
+      ProductName
+FROM Products
+WHERE SupplierID in (2, 4)
+ORDER BY Price DESC
+
+4.    
+Вывести товары, добавив поле "ценасоскидкой" в 12.5%.
+
+SELECT
+     *,
+     Price * . AS Price_low
+FROM Products
+
+5.
+У поставщиков 3 и 5 изменить тел/номера на произвольные значения.
+  
+UPDATE Suppliers
+SET Phone='NewNumber'
+WHERE SupplierID IN (3, 5)
+      
+не могу проверить
+
+Error in SQL:
+Operation must use an updateable query.
+Note: Your browser does not support WebSQL, so you are now using a
+light-version of our Try-SQL Editor, with a read-only Database.
+
+If you use a browser with WebSQL support (Chrome, Safari, or Opera), you
+can try any SQL statement, and play with the Database as much as you like.
+     
+
