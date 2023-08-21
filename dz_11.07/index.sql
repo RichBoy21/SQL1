@@ -46,7 +46,8 @@ LIMIT 2;
 
 Задача 6 Вывести страны-поставщики напитков
 
-SELECT Country 
+SELECT Suppliers.Country ,
+       Categories.CategoryName,
 FROM Suppliers
 JOIN Products ON Suppliers.SupplierID = Products.SupplierID
 JOIN Categories ON Products.CategoryID = Categories.CategoryID
